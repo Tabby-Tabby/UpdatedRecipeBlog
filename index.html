@@ -350,12 +350,21 @@
             
             addFavorite(recipe) {
                 const favorites = this.getFavorites();
-                if (!this.isFavorite(recipe.idMeal)) {
-                    favorites.push(recipe);
-                    this.saveFavorites(favorites);
-                    return true;
+                
+                // Check if already favorited
+                if (this.isFavorite(recipe.idMeal)) {
+                    return false;
                 }
-                return false;
+                
+                // Check 15 favorite limit
+                if (favorites.length >= 15) {
+                    alert('⚠️ Maximum 15 favorites reached!\n\nPlease remove some favorites before adding more.');
+                    return false;
+                }
+                
+                favorites.push(recipe);
+                this.saveFavorites(favorites);
+                return true;
             },
             
             removeFavorite(recipeId) {
