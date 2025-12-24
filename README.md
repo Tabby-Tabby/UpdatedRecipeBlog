@@ -3,6 +3,9 @@
 
 A modern, responsive recipe management web application built with vanilla JavaScript, featuring API integration, local storage persistence, and comprehensive security measures.
 
+#Live Demo
+https://tabby-tabby.github.io/UpdatedRecipeBlog/
+
 ## 📋 Table of Contents
 - [Features](#features)
 - [Technologies Used](#technologies-used)
